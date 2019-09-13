@@ -1,0 +1,222 @@
+[
+  {
+    "linkProvider": [
+      {
+        "identifiers": [
+          {
+            "identifier": "dli_________::crossref",
+            "schema": "dnetIdentifier"
+          }
+        ],
+        "name": "Crossref"
+      }
+    ],
+    "relationship": {
+      "inverseRelationship": "",
+      "name": "unknown",
+      "schema": "datacite"
+    },
+    "source": {
+      "identifiers": [
+        {
+          "identifier": "10.1002/2015rs005781",
+          "schema": "doi"
+        },
+        {
+          "identifier": "50|dli_resolver::d30451c171b3e5bfeec1912a4bacf5ec",
+          "schema": "dnetIdentifier"
+        }
+      ],
+      "objectProvider": [
+        {
+          "identifiers": [
+            {
+              "identifier": "dli_________::crossref",
+              "schema": "dnetIdentifier"
+            }
+          ],
+          "name": "Crossref"
+        },
+        {
+          "identifiers": [
+            {
+              "identifier": "dli_________::datacite",
+              "schema": "dnetIdentifier"
+            }
+          ],
+          "name": "Datasets in Datacite"
+        }
+      ],
+      "objectType": {
+        "subType": "",
+        "type": "publication"
+      },
+      "publisher": [
+        {
+          "name": "American Geophysical Union (AGU)"
+        }
+      ],
+      "title": "Multipath propagation of low-frequency radio waves inferred from high-resolution array analysis"
+    },
+    "target": {
+      "creators": [
+        {
+          "name": "Fullekrug, Martin"
+        },
+        {
+          "name": "University of Bath"
+        }
+      ],
+      "identifiers": [
+        {
+          "identifier": "10.15125/bath-00121",
+          "schema": "doi"
+        },
+        {
+          "identifier": "60|dedup_wf_001::dac603d02432b37e3e5004cedd298761",
+          "schema": "dnetIdentifier"
+        }
+      ],
+      "objectProvider": [
+        {
+          "identifiers": [
+            {
+              "identifier": "dli_________::crossref",
+              "schema": "dnetIdentifier"
+            }
+          ],
+          "name": "Crossref"
+        },
+        {
+          "identifiers": [
+            {
+              "identifier": "dli_________::datacite",
+              "schema": "dnetIdentifier"
+            }
+          ],
+          "name": "Datasets in Datacite"
+        }
+      ],
+      "objectType": {
+        "subType": "",
+        "type": "dataset"
+      },
+      "publisher": [
+        {
+          "name": "University of Bath"
+        }
+      ],
+      "title": "Data for Multipath Propagation of Low Frequency Radio Waves Inferred from High Resolution Array Analysis"
+    }
+  },
+  {
+    "linkProvider": [
+      {
+        "identifiers": [
+          {
+            "identifier": "dli_________::datacite",
+            "schema": "dnetIdentifier"
+          }
+        ],
+        "name": "Datasets in Datacite"
+      }
+    ],
+    "relationship": {
+      "inverseRelationship": "",
+      "name": "references",
+      "schema": "datacite"
+    },
+    "source": {
+      "identifiers": [
+        {
+          "identifier": "10.1002/2015rs005781",
+          "schema": "doi"
+        },
+        {
+          "identifier": "50|dli_resolver::d30451c171b3e5bfeec1912a4bacf5ec",
+          "schema": "dnetIdentifier"
+        }
+      ],
+      "objectProvider": [
+        {
+          "identifiers": [
+            {
+              "identifier": "dli_________::crossref",
+              "schema": "dnetIdentifier"
+            }
+          ],
+          "name": "Crossref"
+        },
+        {
+          "identifiers": [
+            {
+              "identifier": "dli_________::datacite",
+              "schema": "dnetIdentifier"
+            }
+          ],
+          "name": "Datasets in Datacite"
+        }
+      ],
+      "objectType": {
+        "subType": "",
+        "type": "publication"
+      },
+      "publisher": [
+        {
+          "name": "American Geophysical Union (AGU)"
+        }
+      ],
+      "title": "Multipath propagation of low-frequency radio waves inferred from high-resolution array analysis"
+    },
+    "target": {
+      "creators": [
+        {
+          "name": "Fullekrug, Martin"
+        },
+        {
+          "name": "University of Bath"
+        }
+      ],
+      "identifiers": [
+        {
+          "identifier": "10.15125/bath-00121",
+          "schema": "doi"
+        },
+        {
+          "identifier": "60|dedup_wf_001::dac603d02432b37e3e5004cedd298761",
+          "schema": "dnetIdentifier"
+        }
+      ],
+      "objectProvider": [
+        {
+          "identifiers": [
+            {
+              "identifier": "dli_________::crossref",
+              "schema": "dnetIdentifier"
+            }
+          ],
+          "name": "Crossref"
+        },
+        {
+          "identifiers": [
+            {
+              "identifier": "dli_________::datacite",
+              "schema": "dnetIdentifier"
+            }
+          ],
+          "name": "Datasets in Datacite"
+        }
+      ],
+      "objectType": {
+        "subType": "",
+        "type": "dataset"
+      },
+      "publisher": [
+        {
+          "name": "University of Bath"
+        }
+      ],
+      "title": "Data for Multipath Propagation of Low Frequency Radio Waves Inferred from High Resolution Array Analysis"
+    }
+  }
+]
