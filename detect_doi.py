@@ -28,28 +28,29 @@ def process_result(my_result, doi, doi_links, log):
                 pub_names = pub_names + pub_list[index]['name'] + ' ; '
             creator_list = source['Creator'] #list of creators
             idict = source['Identifier']
-            for id in idict:
-                data_doi = id['ID']
-                if data_doi.startswith(DATACITE_PREFIX):
-                    #Looks like this link points to local data repository; ignore it........
-                    print('Ignoring link to local data repository')
-                    log.write("........Ignoring link to local data repository \n")
-                    doi_links[doi] = LOCAL_REPO + data_doi
-                else:
-                    #process id
-                    scheme = id['IDScheme']
-                    found = 0
-                    if scheme == 'doi':
-                        for d in dois_found:
-                            #no dups allowed
-                            if d == data_doi:
-                                found = 1
-                        if found == 0:		
-                            dois_found.append(data_doi)
-                            # bib_rec = make_data_citation(creator_list, pub_date, title, pub_names, mat_type, data_doi)
-                            # print(bib_rec)
-                            # bib.write(bib_rec.encode('utf-8') + '\n\n')
-                            log.write("non-Bath" + data_doi.encode("utf-8") + title.encode('utf-8') + pub_names.encode('utf-8') + '\n')
+            if mat_type == 'dataset':
+                for id in idict:
+                    data_doi = id['ID']
+                    if data_doi.startswith(DATACITE_PREFIX):
+                        #Looks like this link points to local data repository; ignore it........
+                        print('Ignoring link to local data repository')
+                        log.write("........Ignoring link to local data repository \n")
+                        doi_links[doi] = LOCAL_REPO + data_doi
+                    else:
+                        #process id
+                        scheme = id['IDScheme']
+                        found = 0
+                        if scheme == 'doi':
+                            for d in dois_found:
+                                #no dups allowed
+                                if d == data_doi:
+                                    found = 1
+                            if found == 0:
+                                dois_found.append(data_doi)
+                                # bib_rec = make_data_citation(creator_list, pub_date, title, pub_names, mat_type, data_doi)
+                                # print(bib_rec)
+                                # bib.write(bib_rec.encode('utf-8') + '\n\n')
+                                log.write("non-Bath" + data_doi.encode("utf-8") + title.encode('utf-8') + pub_names.encode('utf-8') + '\n')
         return dois_found
 
 # def make_data_citation(creator_list, pub_year, title, pub_names, mat_type, doi):

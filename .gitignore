@@ -1,0 +1,16 @@
+# ignore output files
+hits.txt
+no_hits.txt
+bath_dataset_links.tsv
+records.json
+log.txt
+bath.txt
+non_bath.tsv
+bath_archive.txt
+
+# ignore folder
+
+uni_doi_list
+
+# Ignore Mac system files
+.DS_store

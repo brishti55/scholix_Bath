@@ -2,8 +2,8 @@ import fileinput
 import json
 import requests
 
-datacite_prefix = '10.15125'  #Bath prefix
-repo_name = '* Bath Archive *'
+# datacite_prefix = '10.15125'  #Bath prefix
+# repo_name = '* Bath Archive *'
 API = 'http://api.scholexplorer.openaire.eu/v2/Links'
 
 
@@ -16,6 +16,7 @@ def queryAPI():
     doi_list = []
     count = 0
     no_link = 0
+    link = 0
 
     j = open(json_data, 'w')
     hit_doi = open(hits, 'w')
@@ -50,11 +51,20 @@ def queryAPI():
                     no_doi_found.write("No research data found for " + doi + "\n")
                     no_link += 1
                 else:
-                    doi_list.append(doi)
-                    hit_doi.write(doi + "\n")
+                    link +=1
+                    for data in my_result:
+                        source = data['source']
+                        obj_type = source['Type']
+                        if obj_type == 'dataset':
+                            doi_list.append(doi)
+                            hit_doi.write(doi + "\n")
 
-    print(doi_list)
-    print(len(doi_list))
+    print('Any links found: ' +str(link))
+    # total dataset links
+    print('total dataset links (counting all subsets): ' + str(len(doi_list)))
+    # total unique 1:1 links
+    print('total unique links: ' + str(len(list(set(doi_list)))))
+    # print(len(list(set(doi_list))))
     print('Did not find a link: ' + str(no_link))
 
     return;
