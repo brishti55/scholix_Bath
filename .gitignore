@@ -7,10 +7,12 @@ log.txt
 bath.txt
 non_bath.tsv
 bath_archive.txt
+final_doi.csv
 
 # ignore folder
 
 uni_doi_list
+.idea
 
 # Ignore Mac system files
 .DS_store
