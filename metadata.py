@@ -7,7 +7,7 @@ repo_name = '* Bath Archive *'
 API = 'http://api.scholexplorer.openaire.eu/v2/Links'
 dois_found = []
 json_data = "records.json"
-no_hits ="no_hits_2.txt"
+no_hits ="no_hits.txt"
 logfile = 'log.txt'
 bath_doi = 'bath.txt'
 non_bath_doi = 'non_bath.tsv'
@@ -78,7 +78,7 @@ for doi in fileinput.input():
                         lit_creators =""
                         for index in range(len(lit_creators_list)):
                             lit_creators = lit_creators + lit_creators_list[index]['Name'] + ' ;'
-                            print(lit_creators)
+                            # print(lit_creators)
 
                         id_field = source['Identifier']
                         for id in id_field:
@@ -100,13 +100,9 @@ for doi in fileinput.input():
                                     if found == 0:
                                         dois_found.append(data_doi)
                                         non_bath.write(doi + '\t' + lit_creators.encode("utf-8") + '\t' + data_doi.encode("utf-8")+ '\t' + "Title: " + title.encode('utf-8') +" Publisher: "+ pub_names.encode('utf-8') + " Creators: "+ data_creators.encode("utf-8") +'\n')
-                                        # non_bath.write(doi +","+ data_doi.encode("utf-8")+ ", Title: " + title.encode('utf-8') +" Publisher: "+ pub_names.encode('utf-8') + '\n')
-                                        # for d in dois_found:
-                                        #     test_str += d + title.encode('utf-8') + '\t'
-                                        # doi_links[doi] = test_str.rstrip()
 
-                    # for doi in doi_links:
-                    #     non_bath.write(doi + '\t' + doi_links[doi] + '\n')
+                                        # list publisher names only
+                                        # non_bath.write(doi + '\t'  + data_doi.encode("utf-8")+ '\t' + pub_names.encode('utf-8') +'\n')
 
 
                     else:

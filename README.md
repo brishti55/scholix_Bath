@@ -14,7 +14,7 @@ b) Finding datasets associated with research outputs from U of Bath
 The first step is to collect the DOIs of research output or Bath Archive datasets and save them in a .txt or .csv file. The raw output from Scopus or Pure often contain URL or special characters. Make sure the list is clean or the code will break. (The code hasn't been tested against other PID, such as handle.)
 
 #### Step 2
-##### Case A - Link between Bath Archive DOIs and associated datasets
+##### Case A - Link between Bath Archive DOIs and associated literature
 
 ##### To run code use : python python_filename file_with_doi
 
