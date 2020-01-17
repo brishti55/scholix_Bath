@@ -1,4 +1,5 @@
 ## Using [Scholix](http://www.scholix.org/) to find links between research outputs and any associated datasets with available metadata.
+### [![DOI](https://zenodo.org/badge/197576060.svg)](https://zenodo.org/badge/latestdoi/197576060)
 
 ###### This project is built on top of the work done by [Durham University Library](https://github.com/sefnyn/scholix)
 
